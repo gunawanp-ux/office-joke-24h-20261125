@@ -15,7 +15,8 @@ Construction of the joke in LINE:
   years in") or the second twist.
 
 The program writes the single line to /output/entry.txt, as the
-competition's grader expects, and also prints it to stdout.
+competition's grader expects. It prints nothing to stdout: the graded
+artifact is the file alone.
 """
 
 import os
@@ -29,7 +30,6 @@ def main() -> None:
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as handle:
         handle.write(LINE)
-    print(LINE)
 
 
 if __name__ == "__main__":
